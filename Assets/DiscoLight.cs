@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DiscoLight : MonoBehaviour
 {
+    public float rotationSpeed = 100f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class DiscoLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0f, 10f, 0f));
+        transform.Rotate(new Vector3(0f, rotationSpeed, 0f) * Time.deltaTime, Space.World);
     }
 }
